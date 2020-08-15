@@ -14,27 +14,27 @@ function runDispenser() {
     var choice = prompt("Enter choice");
     switch (Number(choice)) {
         case 1:
-            var color = prompt("Enter color");
-            var count = prompt("Enter count");
+            // var color = prompt("Enter color");
+            // var count = prompt("Enter count");
             var err = addChocolates(chocolates, color, count);
             if (err != 'undefined')
                 console.log(err);
             break;
         case 2:
-            var number = prompt("Enter number");
+            // var number = prompt("Enter number");
             console.log("Chocolates removed: " + removeChocolates(chocolates, number));
             break;
         case 3:
-            var number = prompt("Enter number");
+            // var number = prompt("Enter number");
             console.log("Chocolates dispensed: " + dispenseChocolates(chocolates, number));
             break;
         case 4:
-            var color = prompt("Enter color");
-            var number = prompt("Enter count");
+            // var color = prompt("Enter color");
+            // var number = prompt("Enter count");
             console.log("Chocolates dispensed: " + dispenseChocolatesOfColor(chocolates, number, color));
             break;
         case 5:
-            var count = noOfChocolates(chocolates);
+            // var count = noOfChocolates(chocolates);
             console.log(count);
             console.log("Green: " + count[0] + " Silver: " + count[1] + " Blue: " + count[2] + " Crimson: " + count[3] + " Purple: " + count[4] + " Red: " + count[5] + " Pink: " + count[6]);
             break;
@@ -42,9 +42,9 @@ function runDispenser() {
             sortChocolateBasedOnCount(chocolates);
             break;
         case 7:
-            var count = prompt("Number of chocolates to change");
-            var currentColor = prompt("Current color");
-            var finalColor = prompt("Desired color");
+            // var count = prompt("Number of chocolates to change");
+            // var currentColor = prompt("Current color");
+            // var finalColor = prompt("Desired color");
             let returnVal = changeChocolateColor(chocolates, count, currentColor, finalColor);
             if (typeof (returnVal) === 'string')
                 console.log(returnVal);
@@ -52,8 +52,8 @@ function runDispenser() {
                 chocolates = returnVal;
             break;
         case 8:
-            var currentColor = prompt("Current color");
-            var finalColor = prompt("Desired color");
+            // var currentColor = prompt("Current color");
+            // var finalColor = prompt("Desired color");
             let returnArr = changeChocolateColorAllOfxCount(chocolates, currentColor, finalColor);
             if (typeof (returnArr) === 'string')
                 console.log(returnArr);
@@ -63,11 +63,11 @@ function runDispenser() {
             }
             break;
         case 9:
-            var color = prompt("Color to be removed");
+            // var color = prompt("Color to be removed");
             console.log("Chocolate removed: " + removeChocolateOfColor(chocolates, color));
             break;
         case 10:
-            var number = prompt("Chocolates to dispense");
+            // var number = prompt("Chocolates to dispense");
             console.log("Rainbow chocolates dispensed: " + dispenseRainbowChocolates(chocolates, number));
             break;
     }
